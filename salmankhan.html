@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Management System Webpage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            scroll-behavior: smooth;
+        }
+
+        /* Top Bar */
+        .topbar {
+            background: #1b1f23;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .topbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .topbar .buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar .buttons a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .topbar .buttons .register-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .topbar .buttons .register-btn:hover {
+            background: #218838;
+        }
+
+        .navbar {
+            background: #5f7081;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #0072c6, #005999);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 280px;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            padding: 12px 20px;
+            border: none;
+            background: #1b1f23;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 40px 20px;
+            background: #fff;
+        }
+
+        .partner-item {
+            text-align: center;
+        }
+
+        .partner-item img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .partner-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .partner-item a:hover {
+            color: #0072c6;
+        }
+
+        .sections {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .form-container {
+            width: 380px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transition: all 0.5s ease;
+        }
+
+        .form-container:target {
+            background: #fff9e6;
+            box-shadow: 0 0 25px rgba(40, 167, 69, 0.5);
+            transform: scale(1.02);
+            border: 2px solid #28a745;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-container input[type="submit"] {
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background: #218838;
+        }
+
+        .form-title {
+            text-align: center;
+            margin: 50px 0 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .footer {
+            background: #1b1f23;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top bar - Login button removed -->
+    <div class="topbar">
+        <div class="logo">LMS Webpage</div>
+        <div class="buttons">
+            <a href="#register" class="register-btn">Register for many courses</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="#">Web Platform</a>
+        <a href="#">Zones</a>
+        <a href="#">Developer Tools</a>
+        <a href="#">Demos</a>
+        <a href="#">Connect</a>
+    </div>
+    
+    <div class="navbar">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JAVA Script</a>
+        <a href="#">PHP</a>
+        <a href="#">React</a>
+    </div>
+
+    <hr>
+
+    <div class="hero">
+        <h1>Search anything about learning</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Search courses, docs, tutorials...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="partner-logos">
+        <div class="partner-item">
+            <a href="https://www.google.com" target="_blank">
+                <img src="google.JFIF" alt="Google">
+                Google
+            </a>
+        </div>
+        <div class="partner-item">
+            <a href="https://github.com/" target="_blank">
+                <img src="git.JFIF" alt="GitHub">
+                GitHub
+            </a>
+        </div>
+        <div class="partner-item">
+            <a href="https://www.learnworlds.com/" target="_blank">
+                <img src="learnworlds.JFIF" alt="LearnWorlds">
+                LearnWorlds
+            </a>
+        </div>
+        <div class="partner-item">
+            <a href="https://www.udemy.com" target="_blank">
+                <img src="udemy.JFIF" alt="Udemy">
+                Udemy
+            </a>
+        </div>
+        <div class="partner-item">
+            <a href="https://www.coursera.org/" target="_blank">
+                <img src="courcera.JFIF" alt="Coursera">
+                Coursera
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="sections">
+        <div class="card">
+            <h3>Web Platform</h3>
+            <p>Learn HTML, CSS, JavaScript and more.</p>
+        </div>
+        <div class="card">
+            <h3>Zones</h3>
+            <p>Explore documentation areas.</p>
+        </div>
+    </div>
+
+
+    <!-- Register section (highlighted when clicked from top) -->
+    <div class="form-title">Register for many courses</div>
+    <div class="form-container" id="register">
+        <h2>Create Your Account</h2>
+        <input type="text" placeholder="Enter Username" required>
+        <input type="password" placeholder="Enter Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <input type="submit" value="Register Now">
+    </div>
+
+    <div style="text-align: center; margin: 60px 0;">
+        <audio controls autoplay loop>
+            <source src="music.mpeg" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+
+    <div class="footer">
+        © 2026
+    </div>
+
+</body>
+</html>
